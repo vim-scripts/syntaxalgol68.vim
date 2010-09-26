@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language:	Algol68
-" Version: 0.1
+" Version: 0.2
 " Last Change:	
 " Maintainer:  NevilleD.ALGOL_68@sgr-a.net
 " Previous Maintainer:	
@@ -155,7 +155,7 @@ endif
 syn match  algol68Number		"-\=\<\d\+\>"
 syn match  algol68Float		"-\=\<\d\+\.\d\+\>"
 " add subscr 10
-syn match  algol68Float		"-\=\<\d\+\.\d\+[eE\\]-\=\d\+\>" 
+syn match  algol68Float		"-\=\<\d\+\.\d\+[eE\\⏨]-\=\d\+\>" 
 syn match  algol68Float		"-\=\<\d\+\.\d\+₁₀-\=\d\+\>" 
 "syn match  algol68HexNumber	"\$[0-9a-fA-F]\+\>"
 syn match  algol68HexNumber	"\<2r[01]\+\>"
@@ -235,6 +235,10 @@ if !exists("algol68_traditional")
 "      Modes
 
 "      Transput
+  syn match algol68Predefined "\<stand in\>"
+  syn match algol68Predefined "\<stand out\>"
+  syn match algol68Predefined "\<stand back\>"
+  syn match algol68Predefined "\<stand error\>"
   syn match algol68Predefined "\<stand in channel\>"
   syn match algol68Predefined "\<stand out channel\>"
   syn match algol68Predefined "\<stand back channel\>"
@@ -297,7 +301,7 @@ if !exists("algol68_traditional")
   syn match algol68Function "\<print long long bits\>"
   syn match algol68Function "\<print char\>"
   syn match algol68Function "\<print string\>"
-  syn keyword algol68Predefined stand_in_channel standinchannel stand_out_channel standoutchannel stand_back_channel standbackchannel stand_draw_channel standdrawchannel stand_error_channel standerrorchannel
+  syn keyword algol68Predefined stand_in standin, stand_out standout stand_back standback stand_error standerror stand_in_channel standinchannel stand_out_channel standoutchannel stand_back_channel standbackchannel stand_draw_channel standdrawchannel stand_error_channel standerrorchannel
   syn keyword algol68Function put_possible putpossible get_possible getpossible bin_possible binpossible set_possible setpossible reset_possible resetpossible reidf_possible reidfpossible draw_possible drawpossible compressible on_logical_file_end onlogicalfileend on_physical_file_end onphysicalfileend on_line_end onlineend on_page_end onpageend on_format_end onformatend on_value_error onvalueerror on_open_error onopenerror on_transput_error ontransputerror on_format_error onformaterror open establish create associate close lock scratch space new_line newline print write_f writef print_f printf write_bin writebin print_bin printbin read_f readf read_bin readbin put_f putf get_f getf make_term maketerm make_device makedevice idf term read_int readint read_long_int readlongint read_long_long_int readlonglongint read_real readreal read_long_real readlongreal read_long_long_real readlonglongreal read_complex readcomplex read_long_complex readlongcomplex read_long_long_complex readlonglongcomplex read_bool readbool read_bits readbits read_long_bits readlongbits read_long_long_bits readlonglongbits read_char readchar read_string readstring print_int printint print_long_int printlongint print_long_long_int printlonglongint print_real printreal print_long_real printlongreal print_long_long_real printlonglongreal print_complex printcomplex print_long_complex printlongcomplex print_long_long_complex printlonglongcomplex print_bool printbool print_bits printbits print_long_bits printlongbits print_long_long_bits printlonglongbits print_char printchar print_string printstring whole fixed float
 
 "      Math constants
