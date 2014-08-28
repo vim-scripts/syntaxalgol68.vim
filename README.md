@@ -1,3 +1,10 @@
+vim-algol68
+===========
+
+###installation###
+Pathogen: `git clone` to your `~/.vim/bundle`
+
+###Readme###
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=1927
 
 First version... looking for ideas.
