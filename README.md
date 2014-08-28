@@ -2,7 +2,7 @@ vim-algol68
 ===========
 
 ###installation###
-`git clone` to your `~/.vim/bundle`
+Pathogen: `git clone` to your `~/.vim/bundle`
 
 ###Readme###
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=1927
